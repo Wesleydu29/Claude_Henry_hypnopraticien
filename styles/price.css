@@ -1,0 +1,11 @@
+#price {
+    margin-top: 50px;
+    text-align: center;
+}
+#price h2 {
+    font-size: 2rem;
+}
+.infos-price p {
+    font-weight: 400;
+    font-size: 1.5rem;
+}

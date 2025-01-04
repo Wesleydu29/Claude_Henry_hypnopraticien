@@ -1,0 +1,145 @@
+body {
+    padding: 50px;
+    font-family: Montserrat;
+    background-image: url('../assets/photo_plante.jpg');
+    background-position: bottom;
+    background-size: cover;
+}
+
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.nav-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+.nav-container a {
+    font-size: 25px;
+    font-weight: bold;
+}
+.nav-container a:hover {
+    cursor: pointer;
+    text-decoration: underline; 
+}
+
+.modal-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+	position: fixed;
+	left:0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0,0.5);
+}
+.modal {
+    background-image: url('../assets/photo_claude5.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-radius: 25px;
+    height: 600px;
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+.modal-header i {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.modal h2 {
+    font-size: 40px;
+}
+
+.modal .modal-paragraphe {
+    width: 70%;
+    text-align: center;
+    font-size: 22px;
+}
+.infos-modal {
+    margin-top: 30px;
+    animation: slideInRight 1s ease-out forwards;
+}
+.infos-modal > div {
+    opacity: 0;  /* Commencer avec une opacité nulle */
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.infos-modal .localisation {
+    animation-delay: 0.3s;
+}
+
+.infos-modal .phone {
+    animation-delay: 0.6s;
+}
+
+.infos-modal .mail {
+    animation-delay: 0.9s;
+}
+
+.infos-modal .localisation, .phone, .mail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.localisation, .phone, .mail, i {
+    font-size: 30px;
+}
+
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1;}
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);  /* Commence en dehors de l'écran à droite */
+        opacity: 0; /* Invisible au début */
+    }
+    100% {
+        transform: translateX(-80px);  /* Fin à sa position normale */
+        opacity: 1; /* Rendre l'élément visible */
+    }
+}
+
+.description {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.description-content {
+    text-align: center;
+    width: 70%;
+}
+.description-content p {
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+

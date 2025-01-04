@@ -1,0 +1,43 @@
+.modal2-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+	position: fixed;
+	left:0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0,0.5);
+}
+.modal2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-radius: 25px;
+    background-color: white;
+    height: auto;
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.modal2-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.modal2-header .closeIcon {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+    /*background-image: url('../assets/photo_succulent.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;

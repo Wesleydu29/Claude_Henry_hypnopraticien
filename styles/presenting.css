@@ -1,0 +1,23 @@
+#presenting {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 100px;
+    background-color: transparent;
+}
+#presenting img {
+    border-radius: 5px;
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+#presenting p {
+    max-width: 600px;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+}
