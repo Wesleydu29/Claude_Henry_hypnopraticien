@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <title>Claude Henry - Hypnopraticien</title>
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/presenting.css">
@@ -78,12 +79,38 @@
             </div>
 
         </section>
+        
         <div class="container-form">
             <section id="contact-form">
                 <h2>Des questions ? Écrivez moi un message.</h2>
                 <p>Je m'engage à vous répondre le plus rapidement possible.</p>
                 <a href="mailto:claudehenry29@proton.me?subject=Demande d'information">Cliquez ici pour m'envoyer un mail</a>
             </section>
+        </div>
+        
+        <div class="geolocalisation">
+            <div id="map"></div>
+            <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+            <script>
+                // Coordonnées du lieu à géolocaliser (Exemple : Paris, France)
+                var lat = 47.967632;
+                var lon = -3.935619;
+
+                // Initialisation de la carte centrée sur les coordonnées
+                var map = L.map('map').setView([lat, lon], 13);
+
+                // Chargement des tuiles de la carte (OpenStreetMap)
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+
+                // Ajout d'un marqueur à l'emplacement géolocalisé
+                L.marker([lat, lon]).addTo(map)
+                    .bindPopup("Lieu géolocalisé : Saint Yvy")
+                    .openPopup();
+            </script>
+
         </div>
 
     </main>
